@@ -94,8 +94,11 @@ public interface Action extends Instance<ActionDef> {
             json.writeMapEntry("id", action.getId());
             json.writeMapEntry("state", action.getState());
             json.writeMapEntry("returnValue", returnValue);
-            json.writeMapEntry("error", action.getErrors());
-
+            List<Object> errors = action.getErrors();
+            
+            if(errors != null && errors.size() > 0){
+            	json.writeMapEntry("error", errors);
+            }
             if (action.isStorable()) {
                 json.writeMapEntry("storable", true);
 

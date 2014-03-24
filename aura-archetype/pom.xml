@@ -6,7 +6,7 @@
     <name>archetype for Aura-based "hello, world"</name>
 
   <parent>
-    <groupId>org.auraframework</groupId>
+    <groupId>ws.fawn</groupId>
     <artifactId>aura-framework</artifactId>
     <version>0.806-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>

@@ -2,40 +2,40 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>aura-integration-test</artifactId>
     <parent>
-        <groupId>org.auraframework</groupId>
+        <groupId>ws.fawn</groupId>
         <artifactId>aura-framework</artifactId>
         <version>0.806-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <dependencies>
         <dependency>
-            <groupId>org.auraframework</groupId>
+            <groupId>ws.fawn</groupId>
             <artifactId>aura-resources</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.auraframework</groupId>
+            <groupId>ws.fawn</groupId>
             <artifactId>aura-impl</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.auraframework</groupId>
+            <groupId>ws.fawn</groupId>
             <artifactId>aura-util</artifactId>
             <type>test-jar</type>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.auraframework</groupId>
+            <groupId>ws.fawn</groupId>
             <artifactId>aura</artifactId>
             <type>test-jar</type>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.auraframework</groupId>
+            <groupId>ws.fawn</groupId>
             <artifactId>aura-impl</artifactId>
             <type>test-jar</type>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.auraframework</groupId>
+            <groupId>ws.fawn</groupId>
             <artifactId>aura-impl-expression</artifactId>
             <type>test-jar</type>
             <scope>test</scope>
@@ -213,6 +213,7 @@
                         </execution>
                     </executions>
                 </plugin>
+                <!-- 
                 <plugin>
                     <groupId>com.savage7.maven.plugins</groupId>
                     <artifactId>maven-external-dependency-plugin</artifactId>
@@ -243,6 +244,7 @@
                         </execution>
                     </executions>
                 </plugin>
+                
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
@@ -268,7 +270,7 @@
                             </configuration>
                         </execution>
                     </executions>
-                </plugin>
+                </plugin>-->
                 <!--This plugin's configuration is used to store Eclipse m2e settings
                     only. It has no influence on the Maven build itself. -->
                 <plugin>

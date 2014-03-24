@@ -99,7 +99,7 @@ public class AuraServlet extends AuraBaseServlet {
     protected final static StringParam tag = new StringParam(AURA_PREFIX + "tag", 128, true);
     private static final EnumParam<DefType> defTypeParam = new EnumParam<DefType>(AURA_PREFIX + "deftype", false,
             DefType.class);
-    private final static StringParam messageParam = new StringParam("message", 0, false);
+    public final static StringParam messageParam = new StringParam("message", 0, false);
     private final static StringParam beaconParam = new StringParam("beaconData", 0, false);
 
     // FIXME: is this really a good idea?
@@ -337,14 +337,15 @@ public class AuraServlet extends AuraBaseServlet {
             // handle transaction beacon JSON data
             // FIXME: this should be an action.
             //
-            String beaconData = beaconParam.get(request);
+            /*String beaconData = beaconParam.get(request);
             if (!"undefined".equals(beaconData) && !AuraTextUtil.isNullEmptyOrWhitespace(beaconData)) {
                 loggingService.setValue(LoggingService.BEACON_DATA, new JsonReader().read(beaconData));
-            }
+            }*/
 
 
             String fwUID = Aura.getConfigAdapter().getAuraFrameworkNonce();
-            if (!fwUID.equals(context.getFrameworkUID())) {
+            String clientFwID = context.getFrameworkUID();
+            if (clientFwID != null && !fwUID.equals(clientFwID)) {
                 throw new ClientOutOfSyncException("Framework has been updated");
             }
             context.setFrameworkUID(fwUID);

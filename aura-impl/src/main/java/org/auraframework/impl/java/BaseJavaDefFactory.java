@@ -63,7 +63,8 @@ public abstract class BaseJavaDefFactory<D extends Definition> extends DefFactor
             } else {
                 clazz = Class.forName(String.format("%s.%s", descriptor.getNamespace(), descriptor.getName()));
             }
-        } catch (ClassNotFoundException e) {
+        } catch (Throwable e) {
+            e.printStackTrace();
             return null;
         }
         return clazz;

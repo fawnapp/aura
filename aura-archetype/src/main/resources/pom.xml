@@ -12,22 +12,95 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <repositories>
+    
+    <repositories>      
         <repository>
-            <id>libs-internal</id>
-            <url>http://maven.auraframework.org/libs-release</url>
+            <id>jsdoctk1</id>
+            <url>http://jsdoctk-plugin.googlecode.com/svn/repo</url>
         </repository>
-
         <repository>
-            <id>libs</id>
-            <url>http://repo.auraframework.org/libs-release</url>
+            <id>args4j</id>
+            <name>Args4J public repository</name>
+            <url>http://repo.jfrog.org/artifactory/libs-releases/</url>
         </repository>
-
+        <repository>
+          <id>phloc.com</id>
+          <url>http://repo.phloc.com/maven2</url>
+        </repository>
+        <repository>
+            <snapshots />
+            <id>repo.auraframework.org-chromedriver</id>
+            <url>http://repo.auraframework.org/chromedriver</url>
+        </repository>
+        
+        <repository>
+            <id>maven-s3-release-repo</id>
+            <name>S3 Release Repository</name>
+            <url>s3://mvn.fawnapp.com/release</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>maven-s3-snapshot-repo</id>
+            <name>S3 Snapshot Repository</name>
+            <url>s3://mvn.fawnapp.com/snapshot</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        
+        <repository>
+            <id>central</id>
+            <name>Maven Repository Switchboard</name>
+            <layout>default</layout>
+            <url>http://repo1.maven.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>  
         <repository>
             <id>phloc.com</id>
             <url>http://repo.phloc.com/maven2</url>
         </repository>
     </repositories>
+
+
+   
+    <pluginRepositories>
+        <pluginRepository>
+            <id>jsdoctk2</id>
+            <url>http://jsdoctk-plugin.googlecode.com/svn/repo</url>
+        </pluginRepository>
+      <pluginRepository>  
+        <id>maven-s3-release-repo</id>  
+        <name>S3 Release Repository</name>  
+        <url>s3://mvn.fawnapp.com/release</url>  
+        <releases>  
+          <enabled>true</enabled>  
+        </releases>  
+        <snapshots>  
+          <enabled>false</enabled>  
+        </snapshots>  
+      </pluginRepository>  
+      <pluginRepository>  
+        <id>maven-s3-snapshot-repo</id>  
+        <name>S3 Snapshot Repository</name>  
+        <url>s3://mvn.fawnapp.com/snapshot</url>  
+        <releases>  
+          <enabled>false</enabled>  
+        </releases>  
+        <snapshots>  
+          <enabled>true</enabled>  
+        </snapshots>  
+      </pluginRepository>  
+    </pluginRepositories>
 
     <dependencies>
         <dependency>
